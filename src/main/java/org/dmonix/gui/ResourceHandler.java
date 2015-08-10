@@ -52,7 +52,7 @@ public abstract class ResourceHandler {
      * @deprecated Use ImageLoaderUtil.getDmonixLogoColorIcon();
      */
     public static ImageIcon getDmonixLogo() {
-        return getImageIcon("/org/dmonix/gui/img/dmonix_logo.gif");
+        return getImageIcon("/img/dmonix_logo.gif");
     }
 
     /**

@@ -1,9 +1,19 @@
 package org.dmonix.gui.frames;
 
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.HeadlessException;
+import java.awt.Insets;
 import java.awt.event.WindowEvent;
 
-import javax.swing.*;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JSplitPane;
+import javax.swing.JTree;
 import javax.swing.event.TreeSelectionEvent;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
@@ -37,7 +47,7 @@ public class HelpFrame extends JFrame {
 
     public HelpFrame() throws HeadlessException {
         try {
-            super.setIconImage(new ImageIcon(HelpFrame.class.getResource("/org/dmonix/gui/img/Help.gif")).getImage());
+            super.setIconImage(new ImageIcon(HelpFrame.class.getResource("/img/Help.gif")).getImage());
             jbInit();
             init();
         } catch (Exception e) {

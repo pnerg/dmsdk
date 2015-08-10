@@ -338,7 +338,7 @@ public class BaseFrame extends JFrame implements WindowListener {
      * @since 1.1
      */
     protected JMenuItem getAboutMenuItem() {
-        JMenuItem menuItemAbout = new JMenuItem("About", new ImageIcon(BaseFrame.class.getClassLoader().getResource("org/dmonix/gui/img/Information16.gif")));
+        JMenuItem menuItemAbout = new JMenuItem("About", new ImageIcon(BaseFrame.class.getClassLoader().getResource("img/Information16.gif")));
         menuItemAbout.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 showSplashScreen(true);
