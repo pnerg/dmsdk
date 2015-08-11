@@ -1,34 +1,31 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  <!--parent>
-    <groupId>org.dmonix</groupId>
-    <artifactId>dmonix</artifactId>
-    <version>1.0</version>
-    <relativePath>../pom.xml</relativePath>
-  </parent-->
+	<!--parent> <groupId>org.dmonix</groupId> <artifactId>dmonix</artifactId> 
+		<version>1.0</version> <relativePath>../pom.xml</relativePath> </parent -->
 
-  <groupId>org.dmonix</groupId>
-   <artifactId>dmsdk</artifactId>
-  <name>dmsdk</name>
-  <version>3.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+	<groupId>org.dmonix</groupId>
+	<artifactId>dmsdk</artifactId>
+	<name>dmsdk</name>
+	<version>3.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
 
-  <description>SDK for all DMoniX applications</description>
+	<description>SDK for all DMoniX applications</description>
 
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.10</version>
-      <scope>test</scope>
-    </dependency>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
 
-  </dependencies>
+	</dependencies>
 
-  <build>
- 		<plugins>
+	<build>
+		<plugins>
 
 			<plugin>
 				<!--groupId>org.apache.maven.plugins</groupId -->
@@ -40,8 +37,26 @@
 					<encoding>UTF-8</encoding> <!-- Fix for unmappable character for encoding Cp1252 problem -->
 				</configuration>
 			</plugin>
-    </plugins>
 
-  </build>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<failOnError>false</failOnError>
+					<quiet>true</quiet>
+				</configuration>
+			</plugin>
+
+		</plugins>
+
+	</build>
 
 </project>
