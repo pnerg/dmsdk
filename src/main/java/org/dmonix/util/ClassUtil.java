@@ -1,8 +1,11 @@
 package org.dmonix.util;
 
+import java.awt.Desktop;
+import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.net.MalformedURLException;
-import java.net.URL;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 /**
  * Miscellaneus utility methods.
@@ -67,20 +70,26 @@ public abstract class ClassUtil {
 
     /**
      * Opens the default brower with the supplied URL. <br>
-     * The method requires the <code>com.sun.javaws.BrowserSupport</code> class to be included in the classpath. <br>
-     * The above class will automatically be included in the classpath if the application invoking this method is running under Java Web Start.
      * 
      * @param url
      *            The URL
+     * @throws URISyntaxException
+     * @throws IOException
      * @throws ClassNotFoundException
      * @throws NoSuchMethodException
      * @throws MalformedURLException
      * @throws InvocationTargetException
      * @throws IllegalAccessException
      */
-    public static void openBrowser(String url) throws ClassNotFoundException, NoSuchMethodException, MalformedURLException, InvocationTargetException,
-            IllegalAccessException {
-        Class.forName("com.sun.javaws.BrowserSupport").getDeclaredMethod("showDocument", new Class[] { URL.class }).invoke(null, new Object[] { new URL(url) });
+    public static void openBrowser(String url) throws IOException, URISyntaxException {
+        if (Desktop.isDesktopSupported()) {
+            // Windows
+            Desktop.getDesktop().browse(new URI(url));
+        } else {
+            // Ubuntu
+            Runtime runtime = Runtime.getRuntime();
+            runtime.exec("/usr/bin/firefox -new-window " + url);
+        }
     }
 
     /**

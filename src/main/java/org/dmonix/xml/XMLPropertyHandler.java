@@ -97,7 +97,7 @@ public abstract class XMLPropertyHandler {
         try {
             XMLUtil.saveToFile(properties, file);
         } catch (Exception ex) {
-            log.log(Level.SEVERE, "Could not save properties : " + ex.getMessage());
+            log.log(Level.SEVERE, "Could not save properties", ex);
         }
     }
 
