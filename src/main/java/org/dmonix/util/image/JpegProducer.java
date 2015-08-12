@@ -88,6 +88,7 @@ public class JpegProducer {
      *            The output stream
      * @throws IOException
      */
+    @SuppressWarnings("restriction")
     public void encodeImage(ImageObject imageObject, OutputStream stream) throws IOException {
         JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(stream);
         encoder.encode(createImage(imageObject));
