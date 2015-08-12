@@ -10,9 +10,6 @@ import java.io.OutputStream;
 
 import org.dmonix.util.image.imageobjects.ImageObject;
 
-import com.sun.image.codec.jpeg.JPEGCodec;
-import com.sun.image.codec.jpeg.JPEGImageEncoder;
-
 /**
  * Utility class for creating JPEG encoded images.
  * <p>
@@ -53,8 +50,9 @@ public class JpegProducer {
      */
     @SuppressWarnings("restriction")
     public static void encodeImage(BufferedImage bi, OutputStream stream) throws IOException {
-        JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(stream);
-        encoder.encode(bi);
+        throw new IOException("Method no support for now");
+        // JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(stream);
+        // encoder.encode(bi);
     }
 
     /**
@@ -90,8 +88,9 @@ public class JpegProducer {
      */
     @SuppressWarnings("restriction")
     public void encodeImage(ImageObject imageObject, OutputStream stream) throws IOException {
-        JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(stream);
-        encoder.encode(createImage(imageObject));
+        throw new IOException("Method no support for now");
+        // JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(stream);
+        // encoder.encode(createImage(imageObject));
     }
 
     /**
