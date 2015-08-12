@@ -8,7 +8,7 @@
 	<groupId>org.dmonix</groupId>
 	<artifactId>dmsdk</artifactId>
 	<name>dmsdk</name>
-	<version>3.0</version>
+	<version>3.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<description>SDK for all DMoniX applications</description>
 
