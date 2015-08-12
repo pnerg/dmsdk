@@ -11,8 +11,25 @@
 	<name>dmsdk</name>
 	<version>3.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
-
 	<description>SDK for all DMoniX applications</description>
+
+	<url>https://github.com/pnerg/dmsdk</url>
+	<issueManagement>
+		<system>github</system>
+		<url>https://github.com/pnerg/dmsdk/issues</url>
+	</issueManagement>
+
+	<developers>
+		<developer>
+			<name>Peter Nerg</name>
+		</developer>
+	</developers>
+	<scm>
+		<connection>scm:git:git@github.com:pnerg/dmsdk.git</connection>
+		<developerConnection>scm:git:git@github.com:pnerg/dmsdk.git</developerConnection>
+		<url>git@github.com:pnerg/dmsdk.git</url>
+		<tag>HEAD</tag>
+	</scm>
 
 	<dependencies>
 		<dependency>
