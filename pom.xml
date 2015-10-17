@@ -2,21 +2,35 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<!--parent> <groupId>org.dmonix</groupId> <artifactId>dmonix</artifactId> 
-		<version>1.0</version> <relativePath>../pom.xml</relativePath> </parent -->
-
 	<groupId>org.dmonix</groupId>
 	<artifactId>dmsdk</artifactId>
 	<name>dmsdk</name>
 	<version>3.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<description>SDK for all DMoniX applications</description>
-
 	<url>https://github.com/pnerg/dmsdk</url>
+	<description>SDK for all DMoniX applications</description>
 	<issueManagement>
 		<system>github</system>
 		<url>https://github.com/pnerg/dmsdk/issues</url>
 	</issueManagement>
+
+	<distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+		<repository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+	</distributionManagement>
+
+	<licenses>
+		<license>
+			<name>The Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
 
 	<developers>
 		<developer>
@@ -37,7 +51,6 @@
 			<version>4.10</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
 
 	<build>
